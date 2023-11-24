@@ -1,0 +1,20 @@
+.generator{
+    font-size: 24px;
+}
+
+/* Styling the Dog Image that appears  */
+
+.dog-image {
+    max-width: 100%;
+    height: 400px;
+}
+
+/* Styling the cat fact that appears */
+
+.cat-fact{
+    padding: 8px;
+    max-width: 50rem;
+    font-size: 20px;
+    background-color: #FF6978;
+    color: #000;
+}

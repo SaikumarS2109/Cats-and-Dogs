@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
+
+body {
+  /* color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb)); */
+    background-color: #5998C5;
+}
+
+/* This will style the background of facts and images */
+
+.masonry-container {
+  width: 75rem;
+  margin: 1.25rem auto;
+  columns: 4;
+  column-gap: 1.25rem;
+}
+
+/* Style the item to retain 100% of the width of each column */
+
+.masonry-container .masonry-item{
+  width: 100%;
+  margin-bottom: 1.125rem;
+  break-inside: avoid;
+}
+
+.masonry-container .masonry-item img{
+  max-width: 100%;
+}
+
+/* Specify the style for cat fact div */
+
+.masonry-container .masonry-item div{
+  padding: 8px;
+  font-size: 20px;
+  background-color: #FF6978;
+  color: #000;
+}
+
+/* Fixed div that will keep it center at all times */
+
+.center-screen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Style the user div, decoupled it so you we can use it else where*/
+
+.ask-user{
+  width: 25rem;
+  height: 12.5rem;
+  font-size: 1.5rem;
+  background-color: #FAA6FF;
+  -webkit-box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.75);
+}
+
+/* Style the user error, when there is an error with API*/
+
+.ask-user-error{
+  width: 25rem;
+  height: 18rem;
+  font-size: 1.5rem;
+  background-color: #D62828;
+  -webkit-box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.75);
+}
+
+/* Cat icon that appears at the top right*/
+
+.cat-icon{
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+/* For responsive design of the masonry layout */
+@media (max-width: 75rem) {
+  .masonry-container{
+    width: calc(100% - 2.5rem);
+    columns: 3;
+
+  }
+}
+
+@media (max-width: 48rem) {
+  .masonry-container{
+    columns: 2;
+  }
+}
+
+@media (max-width: 30rem) {
+  .masonry-container{
+    columns: 1;
+  }
+}
+
+/* Scrollbar styling */
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 0.625rem rgba(0, 0, 0, 0.1);
+  padding: 0;
+  scroll-behavior: smooth !important;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #fff;
+  scrollbar-gutter: stable;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: #0091db;
+  background-clip: padding-box; 
+}
+
+/* Fallback for mozilla browser */
+
+*{
+  scrollbar-color: #0091db lightyellow;
+  scrollbar-width: thin;
+  scrollbar-gutter: stable;
+}
+
+
